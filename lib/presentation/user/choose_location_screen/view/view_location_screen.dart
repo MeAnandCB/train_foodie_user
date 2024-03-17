@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:train_foodie_user/presentation/common_provider/commom_controller.dart';
-import 'package:train_foodie_user/presentation/vender_list_screen/vender_list_screen.dart';
+import 'package:train_foodie_user/presentation/user/vender_list_screen/vender_list_screen.dart';
 
 class ViewLocationScreen extends StatefulWidget {
   const ViewLocationScreen({super.key});

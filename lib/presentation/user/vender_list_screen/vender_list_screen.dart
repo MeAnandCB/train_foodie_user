@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train_foodie_user/core/database.dart';
 
-import 'package:train_foodie_user/presentation/food_screen/view/food_screen.dart';
+import 'package:train_foodie_user/presentation/user/food_screen/view/food_screen.dart';
 
 class venderListScreen extends StatelessWidget {
   const venderListScreen({super.key, required this.pnr});

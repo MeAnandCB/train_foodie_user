@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:train_foodie_user/core/colors.dart';
-import 'package:train_foodie_user/presentation/bottom_nav_screen/view/bottom_nav_screeb.dart';
+import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
 
 class PaymentPage extends StatefulWidget {
   @override

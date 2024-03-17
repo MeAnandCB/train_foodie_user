@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:train_foodie_user/presentation/food_details_screen/view/food_detail_screen.dart';
+import 'package:train_foodie_user/presentation/user/food_details_screen/view/food_detail_screen.dart';
 
 class FoodScreen extends StatelessWidget {
   const FoodScreen(

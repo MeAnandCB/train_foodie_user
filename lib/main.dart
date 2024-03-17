@@ -3,7 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:train_foodie_user/box/box.dart';
 import 'package:train_foodie_user/model/history_model.dart';
-import 'package:train_foodie_user/presentation/bottom_nav_screen/view/bottom_nav_screeb.dart';
+import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
 import 'package:train_foodie_user/presentation/common_provider/commom_controller.dart';
 
 Future<void> main() async {

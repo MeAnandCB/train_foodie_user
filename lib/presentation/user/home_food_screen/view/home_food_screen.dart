@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:train_foodie_user/presentation/choose_location_screen/view/view_location_screen.dart';
-import 'package:train_foodie_user/presentation/food_details_screen/view/food_detail_screen.dart';
+import 'package:train_foodie_user/presentation/user/choose_location_screen/view/view_location_screen.dart';
+import 'package:train_foodie_user/presentation/user/food_details_screen/view/food_detail_screen.dart';
 
 class HomeFoodScreen extends StatefulWidget {
   const HomeFoodScreen({super.key});

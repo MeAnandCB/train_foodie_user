@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:train_foodie_user/presentation/bottom_nav_screen/view/bottom_nav_screeb.dart';
-import 'package:train_foodie_user/presentation/signup_screen/view/registration.dart';
+import 'package:train_foodie_user/presentation/user/login_screen/view/login_screen.dart';
 
-class LoginPage extends StatefulWidget {
+class SignupPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignupPageState createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -16,7 +15,6 @@ class _LoginPageState extends State<LoginPage> {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
@@ -25,11 +23,21 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
                         child: Text(
-                          'LogIN',
+                          'Signup',
                           style: TextStyle(
-                              fontSize: 60.0, fontWeight: FontWeight.bold),
+                              fontSize: 80.0, fontWeight: FontWeight.bold),
                         ),
                       ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
+                        child: Text(
+                          '.',
+                          style: TextStyle(
+                              fontSize: 80.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -62,22 +70,33 @@ class _LoginPageState extends State<LoginPage> {
                                   borderSide: BorderSide(color: Colors.green))),
                           obscureText: true,
                         ),
+                        SizedBox(height: 10.0),
+                        TextField(
+                          decoration: InputDecoration(
+                              labelText: 'NICK NAME ',
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey),
+                              focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.green))),
+                        ),
                         SizedBox(height: 20.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text("Don't have an Account? "),
+                            Text("Already have an Account? "),
                             SizedBox(width: 5),
                             InkWell(
                               onTap: () {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => SignupPage(),
+                                      builder: (context) => LoginPage(),
                                     ));
                               },
                               child: Text(
-                                "Register Now",
+                                "Login",
                                 style: TextStyle(
                                     color:
                                         const Color.fromARGB(255, 43, 97, 45)),
@@ -85,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           ],
                         ),
-                        SizedBox(height: 30.0),
+                        SizedBox(height: 20.0),
                         Container(
                             height: 40.0,
                             child: Material(
@@ -98,12 +117,12 @@ class _LoginPageState extends State<LoginPage> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => BottomNavScreen(),
+                                        builder: (context) => LoginPage(),
                                       ));
                                 },
                                 child: Center(
                                   child: Text(
-                                    'Login',
+                                    'SIGNUP',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,

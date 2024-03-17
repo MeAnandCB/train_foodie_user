@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:train_foodie_user/presentation/delivery_screen/view/delivery_screen.dart';
-import 'package:train_foodie_user/presentation/history_screen/view/history_screen.dart';
-import 'package:train_foodie_user/presentation/home_food_screen/view/home_food_screen.dart';
-import 'package:train_foodie_user/presentation/profile_screen/view/profile_screen.dart';
+import 'package:train_foodie_user/presentation/user/delivery_screen/view/delivery_screen.dart';
+import 'package:train_foodie_user/presentation/user/history_screen/view/history_screen.dart';
+import 'package:train_foodie_user/presentation/user/home_food_screen/view/home_food_screen.dart';
+import 'package:train_foodie_user/presentation/user/profile_screen/view/profile_screen.dart';
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
