@@ -3,13 +3,16 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:train_foodie_user/box/box.dart';
 import 'package:train_foodie_user/model/history_model.dart';
-import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
+import 'package:train_foodie_user/model/train_data_model.dart';
 import 'package:train_foodie_user/presentation/common_provider/commom_controller.dart';
+import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
+import 'package:train_foodie_user/presentation/vendor_screen/admin_bottom_screen/view/vendor_Bottom_navscreen.dart';
 
 Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(HistoryModelAdapter());
   historyBox = await Hive.openBox<HistoryModel>('localdb');
+  trainBox = await Hive.openBox<TraindetailsModel>('trainData');
 
   runApp(MyApp());
 }
@@ -21,11 +24,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => CommonController()),
+        ChangeNotifierProvider(
+          create: (context) => CommonController(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: BottomNavScreen(),
+        home: UserBottomNavScreen(),
+        // home: AdminBottomNavScreen(),
       ),
     );
   }

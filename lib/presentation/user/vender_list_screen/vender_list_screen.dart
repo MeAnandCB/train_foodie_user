@@ -59,12 +59,12 @@ class venderListScreen extends StatelessWidget {
                         leading: Container(
                           width: 80,
                           child: Image.network(
-                            DatabaseData.foodDummyData[index]['hotelImage'],
+                            DatabaseData.vendorData[index]['hotelImage'],
                             fit: BoxFit.cover,
                           ),
                         ),
                         title: Text(
-                          DatabaseData.foodDummyData[index]['hotelName'],
+                          DatabaseData.vendorData[index]['hotelName'],
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -72,7 +72,7 @@ class venderListScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              DatabaseData.foodDummyData[index]
+                              DatabaseData.vendorData[index]
                                   ['hotelDescription'],
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
@@ -93,7 +93,7 @@ class venderListScreen extends StatelessWidget {
                                       width: 10,
                                     ),
                                     Text(
-                                      DatabaseData.foodDummyData[index]
+                                      DatabaseData.vendorData[index]
                                           ['location'],
                                       style: TextStyle(fontSize: 10),
                                     ),
@@ -107,8 +107,7 @@ class venderListScreen extends StatelessWidget {
                                       size: 15,
                                     ),
                                     Text(
-                                      DatabaseData.foodDummyData[index]
-                                              ['rating']
+                                      DatabaseData.vendorData[index]['rating']
                                           .toString(),
                                       style: TextStyle(fontSize: 15),
                                     ),
@@ -123,7 +122,7 @@ class venderListScreen extends StatelessWidget {
                 separatorBuilder: (context, index) => SizedBox(
                       height: 10,
                     ),
-                itemCount: DatabaseData.foodDummyData.length),
+                itemCount: DatabaseData.vendorData.length),
           ],
         ),
       ),

@@ -98,7 +98,8 @@ class _LoginPageState extends State<LoginPage> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => BottomNavScreen(),
+                                        builder: (context) =>
+                                            UserBottomNavScreen(),
                                       ));
                                 },
                                 child: Center(

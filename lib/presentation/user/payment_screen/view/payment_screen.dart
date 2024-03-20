@@ -249,7 +249,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    BottomNavScreen(),
+                                                    UserBottomNavScreen(),
                                               ),
                                               (route) => false);
                                           upi = !upi;
@@ -324,7 +324,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => BottomNavScreen(),
+                          builder: (context) => UserBottomNavScreen(),
                         ),
                         (route) => false);
                     cod = !cod;
@@ -372,7 +372,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    BottomNavScreen(),
+                                                    UserBottomNavScreen(),
                                               ),
                                               (route) => false);
                                           cod = !cod;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:train_foodie_user/presentation/common_provider/commom_controller.dart';
+import 'package:train_foodie_user/core/database.dart';
 import 'package:train_foodie_user/presentation/user/vender_list_screen/vender_list_screen.dart';
 
 class ViewLocationScreen extends StatefulWidget {
@@ -16,30 +15,6 @@ class _ViewLocationScreenState extends State<ViewLocationScreen> {
   String? _pnrNumber;
   String? _selectedStop;
 
-  List<String> _trainNames = [
-    'Rajdhani Express',
-    'Shatabdi Express',
-    'Duronto Express',
-    'Garib Rath Express',
-    'Humsafar Express',
-    'Gatimaan Express',
-    'Tejas Express',
-    'Vande Bharat Express',
-    'Antyodaya Express',
-    'Uday Express'
-  ];
-  List<String> _stopNames = [
-    'Station 1',
-    'Station 2',
-    'Station 3',
-    'Station 4',
-    'Station 5',
-    'Station 6',
-    'Station 7',
-    'Station 8',
-    'Station 9',
-    'Station 10'
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +40,7 @@ class _ViewLocationScreenState extends State<ViewLocationScreen> {
                           borderRadius: BorderRadius.circular(10)),
                       child: DropdownButtonFormField(
                         value: _selectedTrain,
-                        items: _trainNames.map((trainName) {
+                        items: DatabaseData.trainNames.map((trainName) {
                           return DropdownMenuItem(
                             value: trainName,
                             child: Text(trainName),
@@ -89,7 +64,7 @@ class _ViewLocationScreenState extends State<ViewLocationScreen> {
                           borderRadius: BorderRadius.circular(10)),
                       child: DropdownButtonFormField(
                         value: _selectedStop,
-                        items: _stopNames.map((stopName) {
+                        items: DatabaseData.stopNames.map((stopName) {
                           return DropdownMenuItem(
                             value: stopName,
                             child: Text(stopName),

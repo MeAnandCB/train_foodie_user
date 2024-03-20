@@ -162,7 +162,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => BottomNavScreen(),
+                builder: (context) => UserBottomNavScreen(),
               ));
         },
         child: Container(

@@ -4,14 +4,14 @@ import 'package:train_foodie_user/presentation/user/history_screen/view/history_
 import 'package:train_foodie_user/presentation/user/home_food_screen/view/home_food_screen.dart';
 import 'package:train_foodie_user/presentation/user/profile_screen/view/profile_screen.dart';
 
-class BottomNavScreen extends StatefulWidget {
-  const BottomNavScreen({super.key});
+class UserBottomNavScreen extends StatefulWidget {
+  const UserBottomNavScreen({super.key});
 
   @override
-  State<BottomNavScreen> createState() => _BottomNavScreenState();
+  State<UserBottomNavScreen> createState() => _UserBottomNavScreenState();
 }
 
-class _BottomNavScreenState extends State<BottomNavScreen> {
+class _UserBottomNavScreenState extends State<UserBottomNavScreen> {
   List _screens = [
     HomeFoodScreen(),
     DeliveryScreen(),
