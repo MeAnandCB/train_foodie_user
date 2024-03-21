@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
 import 'package:train_foodie_user/presentation/user/signup_screen/view/registration.dart';
+import 'package:train_foodie_user/presentation/vendor_screen/admin_bottom_screen/view/vendor_Bottom_navscreen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -99,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            UserBottomNavScreen(),
+                                            AdminBottomNavScreen(),
                                       ));
                                 },
                                 child: Center(

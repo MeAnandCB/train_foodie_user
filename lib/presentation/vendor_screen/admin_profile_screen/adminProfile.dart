@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:train_foodie_user/core/alert_popup.dart';
 import 'package:train_foodie_user/presentation/get_started_screen/get_started_screen.dart';
 
-class UserProfileScreen extends StatelessWidget {
-  const UserProfileScreen({super.key});
+class AdminProfileScreen extends StatefulWidget {
+  const AdminProfileScreen({super.key});
 
+  @override
+  State<AdminProfileScreen> createState() => _AdminProfileScreenState();
+}
+
+class _AdminProfileScreenState extends State<AdminProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

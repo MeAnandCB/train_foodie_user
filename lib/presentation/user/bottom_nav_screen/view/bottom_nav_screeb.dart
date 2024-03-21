@@ -16,7 +16,7 @@ class _UserBottomNavScreenState extends State<UserBottomNavScreen> {
     HomeFoodScreen(),
     DeliveryScreen(),
     HistoryScreen(),
-    ProfileScreen(),
+    UserProfileScreen(),
   ];
   int selectedIndex = 0;
   @override

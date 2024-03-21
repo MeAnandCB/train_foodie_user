@@ -48,8 +48,8 @@ class venderListScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => FoodScreen(
-                              index: index,
-                              mylist: DatabaseData.foodDummyData,
+                              vindex: index,
+                              mylist: DatabaseData.vendorData,
                               pnr: pnr,
                             ),
                           ),

@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:train_foodie_user/box/box.dart';
 import 'package:train_foodie_user/model/history_model.dart';
 import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
-import 'package:train_foodie_user/presentation/common_provider/commom_controller.dart';
+import 'package:train_foodie_user/common_provider/commom_controller.dart';
 
 class FoodDetailScreen extends StatefulWidget {
   const FoodDetailScreen(
@@ -18,7 +18,7 @@ class FoodDetailScreen extends StatefulWidget {
       required this.pnr});
   final String image;
   final String name;
-  final int amount;
+  final String amount;
   final int inx;
   final String location;
   final String pnr;

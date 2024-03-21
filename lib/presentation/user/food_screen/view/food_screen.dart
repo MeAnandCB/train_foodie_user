@@ -5,10 +5,10 @@ class FoodScreen extends StatelessWidget {
   const FoodScreen(
       {super.key,
       required this.mylist,
-      required this.index,
+      required this.vindex,
       required this.pnr});
   final List mylist;
-  final int index;
+  final int vindex;
   final String pnr;
   @override
   Widget build(BuildContext context) {
@@ -28,21 +28,21 @@ class FoodScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                     image: NetworkImage(
-                      mylist[index]['hotelImage'],
+                      mylist[vindex]['hotelImage'],
                     ),
                     fit: BoxFit.cover,
                   )),
             ),
             SizedBox(height: 20),
             Text(
-              mylist[index]['hotelDescription'],
+              mylist[vindex]['hotelDescription'],
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 20),
             Expanded(
                 child: Container(
               child: GridView.builder(
-                itemCount: mylist.length,
+                itemCount: mylist[vindex]['images'].length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 20,
@@ -54,11 +54,17 @@ class FoodScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => FoodDetailScreen(
-                          image: mylist[index]['image'][index],
-                          amount: 150,
-                          name: 'Puttum Kadalayum',
+                          image: mylist[vindex]['images'][index]
+                                  ['product_images'] ??
+                              "",
+                          amount: mylist[vindex]['images'][index]
+                                  ['product_price'] ??
+                              "",
+                          name: mylist[vindex]['images'][index]
+                                  ['product_name'] ??
+                              "",
                           inx: index,
-                          location: mylist[index]['location'],
+                          location: mylist[vindex]['location'] ?? "",
                           pnr: pnr,
                         ),
                       ),
@@ -79,7 +85,9 @@ class FoodScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
                                 image: NetworkImage(
-                                  mylist[index]['image'][index],
+                                  mylist[vindex]['images'][index]
+                                          ['product_images'] ??
+                                      "",
                                 ),
                                 fit: BoxFit.cover,
                               ),
@@ -89,7 +97,8 @@ class FoodScreen extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            mylist[index]['name'],
+                            mylist[vindex]['images'][index]['product_name'] ??
+                                "",
                             maxLines: 1,
                             style: TextStyle(fontSize: 14),
                           ),
@@ -97,7 +106,9 @@ class FoodScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "160 /-",
+                                mylist[vindex]['images'][index]
+                                        ['product_price'] ??
+                                    "",
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),
@@ -108,7 +119,7 @@ class FoodScreen extends StatelessWidget {
                                     color: Colors.amber,
                                     size: 15,
                                   ),
-                                  Text("4.2"),
+                                  Text(mylist[vindex]['rating']),
                                 ],
                               )
                             ],
@@ -123,7 +134,7 @@ class FoodScreen extends StatelessWidget {
                                 size: 10,
                               ),
                               Text(
-                                "Thrikkakara Kakkanad",
+                                mylist[vindex]['location'],
                                 style: TextStyle(
                                   fontSize: 11,
                                 ),
