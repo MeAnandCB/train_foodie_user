@@ -86,7 +86,7 @@ class FoodScreen extends StatelessWidget {
                               image: DecorationImage(
                                 image: NetworkImage(
                                   mylist[vindex]['images'][index]
-                                          ['product_images'] ??
+                                          ['product_name'] ??
                                       "",
                                 ),
                                 fit: BoxFit.cover,
