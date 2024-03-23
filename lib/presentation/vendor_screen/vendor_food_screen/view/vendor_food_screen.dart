@@ -44,6 +44,10 @@ class _vendorFoodScreenState extends State<vendorFoodScreen> {
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10),
               itemBuilder: (context, index) {
+                final reversedIndex = DatabaseData
+                        .vendorData[widget.vendorIndex]['images'].length -
+                    1 -
+                    index;
                 return Column(
                   children: [
                     Stack(
@@ -56,10 +60,10 @@ class _vendorFoodScreenState extends State<vendorFoodScreen> {
                             color: Color.fromARGB(255, 227, 227, 227),
                           ),
                           child: CachedNetworkImage(
-                            imageUrl:
-                                DatabaseData.vendorData[widget.vendorIndex]
-                                        ['images'][index]['pro_images'] ??
-                                    "",
+                            imageUrl: DatabaseData
+                                        .vendorData[widget.vendorIndex]
+                                    ['images'][reversedIndex]['pro_images'] ??
+                                "",
                             fit: BoxFit.cover,
                             placeholder: (context, url) =>
                                 Center(child: CircularProgressIndicator()),
@@ -68,20 +72,23 @@ class _vendorFoodScreenState extends State<vendorFoodScreen> {
                           ),
                         ),
                         Positioned(
-                            right: 0,
-                            child: IconButton(
-                                onPressed: () {
-                                  DatabaseData.vendorData[widget.vendorIndex]
-                                          ['images']
-                                      .removeAt(index);
-                                  setState(() {});
-                                },
-                                icon: Icon(Icons.delete)))
+                          right: 0,
+                          child: IconButton(
+                            onPressed: () {
+                              // To remove from the original list in LIFO order
+                              DatabaseData.vendorData[widget.vendorIndex]
+                                      ['images']
+                                  .removeAt(reversedIndex);
+                              setState(() {});
+                            },
+                            icon: Icon(Icons.delete),
+                          ),
+                        ),
                       ],
                     ),
                     Text(
                       DatabaseData.vendorData[widget.vendorIndex]['images']
-                              [index]['product_name'] ??
+                              [reversedIndex]['product_name'] ??
                           "",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -91,11 +98,11 @@ class _vendorFoodScreenState extends State<vendorFoodScreen> {
                     ),
                     Text(
                       DatabaseData.vendorData[widget.vendorIndex]['images']
-                              [index]['product_price'] ??
+                              [reversedIndex]['product_price'] ??
                           "",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    )
+                    ),
                   ],
                 );
               },

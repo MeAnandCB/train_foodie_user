@@ -195,7 +195,6 @@ class _VendersTabState extends State<VendersTab> {
         child: Icon(Icons.add),
       ),
       body: ListView.separated(
-        reverse: true,
         padding: EdgeInsets.symmetric(vertical: 20),
         itemCount: DatabaseData.vendorData.length,
         itemBuilder: (context, index) => InkWell(

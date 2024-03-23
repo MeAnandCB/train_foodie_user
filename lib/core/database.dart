@@ -167,7 +167,7 @@ class DatabaseData {
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/2290072/pexels-photo-2290072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://imgs.search.brave.com/fscJ6rRQvIT-EA01rDMAeGmZ0EqBWs5D0_tXcZuhN7c/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzUw/MjEyODcwODRhZTk1/NGVmZDMxZTlmNC8x/NTc0OTI0OTMyNTM5/LVBQU0Y2VFA2M08w/WERPRks5MTRSL1By/ZW1pdW0rTWFndXJv/LmpwZw",
           "product_name": "Premium Sushi Platter",
           "product_price": "150.75"
         },
@@ -183,11 +183,6 @@ class DatabaseData {
           "product_name": "Exotic Salad Bowl",
           "product_price": "108.50"
         }
-        //   'https://images.pexels.com/photos/189355/pexels-photo-189355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        //   'https://images.pexels.com/photos/1356202/pexels-photo-1356202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        //   'https://images.pexels.com/photos/2742027/pexels-photo-2742027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        //   'https://images.pexels.com/photos/3663092/pexels-photo-3663092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        //   'https://images.pexels.com/photos/1481831/pexels-photo-1481831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       ]
     },
     {
