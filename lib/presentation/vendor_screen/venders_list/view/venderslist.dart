@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:train_foodie_user/core/database.dart';
@@ -21,14 +22,25 @@ class _VendersListState extends State<VendersList> {
         children: [
           Stack(children: [
             Container(
-              height: 150,
+              height: 170,
+              width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.amber,
+                color: const Color.fromARGB(255, 235, 235, 234),
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    image: NetworkImage(
-                        DatabaseData.vendorData[widget.inx]['hotelImage']),
-                    fit: BoxFit.cover),
+                // image: DecorationImage(
+                //     image:
+                //
+                // NetworkImage(
+                //         DatabaseData.vendorData[widget.inx]['hotelImage']),
+                //     fit: BoxFit.cover),
+              ),
+              child: CachedNetworkImage(
+                imageUrl:
+                    DatabaseData.vendorData[widget.inx]['hotelImage'] ?? "",
+                fit: BoxFit.cover,
+                placeholder: (context, url) =>
+                    Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
             Positioned(

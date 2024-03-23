@@ -28,24 +28,25 @@ class FoodDetailScreen extends StatefulWidget {
 }
 
 class _FoodDetailScreenState extends State<FoodDetailScreen> {
-  int _quantity = 1;
+  int quantity = 1;
 
   void _incrementQuantity() {
     setState(() {
-      _quantity++;
+      quantity++;
     });
   }
 
   void _decrementQuantity() {
-    if (_quantity > 1) {
+    if (quantity > 1) {
       setState(() {
-        _quantity--;
+        quantity--;
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    var value = double.parse(widget.amount);
     final provider = Provider.of<CommonController>(context);
     return Scaffold(
       appBar: AppBar(),
@@ -99,7 +100,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
                             ),
                             SizedBox(width: 10),
                             Text(
-                              '$_quantity',
+                              '$quantity',
                               style: TextStyle(
                                   fontSize: 28, fontWeight: FontWeight.bold),
                             ),
@@ -123,7 +124,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
                               width: 15,
                             ),
                             Text(
-                              "${widget.amount * _quantity}",
+                              "${quantity * value}",
                               style: TextStyle(
                                   fontSize: 28, fontWeight: FontWeight.bold),
                             ),
@@ -145,7 +146,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
       bottomNavigationBar: InkWell(
         onTap: () {
           setState(() {
-            var totalAmount = widget.amount * _quantity;
+            var totalAmount = quantity * value;
             print(totalAmount);
             historyBox.put(
                 'key ${generateRandomNumber()}',

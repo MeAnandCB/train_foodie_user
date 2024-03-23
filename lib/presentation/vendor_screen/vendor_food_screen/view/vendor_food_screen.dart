@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -24,6 +25,9 @@ class _vendorFoodScreenState extends State<vendorFoodScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(
+      DatabaseData.vendorData[widget.vendorIndex]['images'],
+    );
     return Scaffold(
       appBar: AppBar(),
       body: DatabaseData.vendorData[widget.vendorIndex]['images'].isEmpty
@@ -39,50 +43,62 @@ class _vendorFoodScreenState extends State<vendorFoodScreen> {
                   mainAxisExtent: 250,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10),
-              itemBuilder: (context, index) => Column(
-                children: [
-                  Stack(
-                    children: [
-                      Container(
-                        height: 180,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.amber,
-                          image: DecorationImage(
-                              image: NetworkImage(
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          height: 180,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color.fromARGB(255, 227, 227, 227),
+                          ),
+                          child: CachedNetworkImage(
+                            imageUrl:
                                 DatabaseData.vendorData[widget.vendorIndex]
-                                        ['images'][index]['product_images'] ??
+                                        ['images'][index]['pro_images'] ??
                                     "",
-                              ),
-                              fit: BoxFit.cover),
+                            fit: BoxFit.cover,
+                            placeholder: (context, url) =>
+                                Center(child: CircularProgressIndicator()),
+                            errorWidget: (context, url, error) =>
+                                Icon(Icons.error),
+                          ),
                         ),
-                      ),
-                      Positioned(
-                          right: 0,
-                          child: IconButton(
-                              onPressed: () {
-                                DatabaseData.vendorData[widget.vendorIndex]
-                                        ['images']
-                                    .removeAt(index);
-                                setState(() {});
-                              },
-                              icon: Icon(Icons.delete)))
-                    ],
-                  ),
-                  Text(
-                    DatabaseData.vendorData[widget.vendorIndex]['images'][index]
-                            ['product_name'] ??
-                        "",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    DatabaseData.vendorData[widget.vendorIndex]['images'][index]
-                            ['product_price'] ??
-                        "",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
+                        Positioned(
+                            right: 0,
+                            child: IconButton(
+                                onPressed: () {
+                                  DatabaseData.vendorData[widget.vendorIndex]
+                                          ['images']
+                                      .removeAt(index);
+                                  setState(() {});
+                                },
+                                icon: Icon(Icons.delete)))
+                      ],
+                    ),
+                    Text(
+                      DatabaseData.vendorData[widget.vendorIndex]['images']
+                              [index]['product_name'] ??
+                          "",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      DatabaseData.vendorData[widget.vendorIndex]['images']
+                              [index]['product_price'] ??
+                          "",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                );
+              },
             ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

@@ -55,7 +55,7 @@ class FoodScreen extends StatelessWidget {
                       MaterialPageRoute(
                         builder: (context) => FoodDetailScreen(
                           image: mylist[vindex]['images'][index]
-                                  ['product_images'] ??
+                                  ['pro_images'] ??
                               "",
                           amount: mylist[vindex]['images'][index]
                                   ['product_price'] ??
@@ -86,7 +86,7 @@ class FoodScreen extends StatelessWidget {
                               image: DecorationImage(
                                 image: NetworkImage(
                                   mylist[vindex]['images'][index]
-                                          ['product_name'] ??
+                                          ['pro_images'] ??
                                       "",
                                 ),
                                 fit: BoxFit.cover,
@@ -119,7 +119,7 @@ class FoodScreen extends StatelessWidget {
                                     color: Colors.amber,
                                     size: 15,
                                   ),
-                                  Text(mylist[vindex]['rating']),
+                                  Text(mylist[vindex]['rating'].toString()),
                                 ],
                               )
                             ],
