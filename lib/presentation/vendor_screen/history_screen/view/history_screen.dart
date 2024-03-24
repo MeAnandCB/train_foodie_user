@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'package:train_foodie_user/box/box.dart';
-import 'package:train_foodie_user/model/history_model.dart';
+import 'package:train_foodie_user/model/history_model/history_model.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});

@@ -1,11 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:train_foodie_user/box/box.dart';
-import 'package:train_foodie_user/model/history_model.dart';
-import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
-import 'package:train_foodie_user/common_provider/commom_controller.dart';
+
+import 'package:train_foodie_user/presentation/user/payment_methode__screen/payment_method.dart';
 
 class FoodDetailScreen extends StatefulWidget {
   const FoodDetailScreen(
@@ -47,7 +42,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
   @override
   Widget build(BuildContext context) {
     var value = double.parse(widget.amount);
-    final provider = Provider.of<CommonController>(context);
+
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -145,26 +140,17 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
       ),
       bottomNavigationBar: InkWell(
         onTap: () {
-          setState(() {
-            var totalAmount = quantity * value;
-            print(totalAmount);
-            historyBox.put(
-                'key ${generateRandomNumber()}',
-                HistoryModel(
-                    name: widget.name,
-                    location: widget.location,
-                    amount: totalAmount.toString(),
-                    date: DateTime.now(),
-                    image: widget.image,
-                    pnr: widget.pnr));
-          });
-          provider.orderPresent = true;
-
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => UserBottomNavScreen(),
-              ));
+                  builder: (context) => PaymentMethods(
+                        image: widget.image,
+                        amount: widget.amount,
+                        name: widget.name,
+                        inx: widget.inx,
+                        location: widget.location,
+                        pnr: widget.pnr,
+                      )));
         },
         child: Container(
           height: 60,
@@ -175,12 +161,5 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
         ),
       ),
     );
-  }
-
-  int generateRandomNumber() {
-    int min = 0;
-    int max = 100;
-    final Random random = Random();
-    return min + random.nextInt(max - min + 1);
   }
 }

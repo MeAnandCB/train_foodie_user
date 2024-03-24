@@ -2,16 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:train_foodie_user/box/box.dart';
-import 'package:train_foodie_user/model/history_model.dart';
-import 'package:train_foodie_user/model/train_data_model.dart';
+import 'package:train_foodie_user/model/food_model/food_model.dart';
+import 'package:train_foodie_user/model/history_model/history_model.dart';
+import 'package:train_foodie_user/model/train_model/train_data_model.dart';
 import 'package:train_foodie_user/common_provider/commom_controller.dart';
-import 'package:train_foodie_user/presentation/get_started_screen/get_started_screen.dart';
+
+import 'package:train_foodie_user/presentation/splash_screen/splash_screen.dart';
 
 Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(HistoryModelAdapter());
+  Hive.registerAdapter(FoodModelAdapter());
   historyBox = await Hive.openBox<HistoryModel>('localdb');
   trainBox = await Hive.openBox<TraindetailsModel>('trainData');
+  foodBox = await Hive.openBox<FoodModel>('Data');
 
   runApp(MyApp());
 }
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         // home: UserBottomNavScreen(),
         // home: AdminBottomNavScreen(),
-        home: GetStartedScreen(),
+        home: SplashScreen(),
       ),
     );
   }

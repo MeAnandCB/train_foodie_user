@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class CommonController extends ChangeNotifier {
   bool orderPresent = false;
-
   showDeliverySuccessDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -14,7 +13,6 @@ class CommonController extends ChangeNotifier {
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
-
                 orderPresent = false;
                 notifyListeners();
               },

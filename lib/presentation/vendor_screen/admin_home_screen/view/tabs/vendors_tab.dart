@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:train_foodie_user/box/box.dart';
 import 'package:train_foodie_user/core/database.dart';
+import 'package:train_foodie_user/model/food_model/food_model.dart';
 import 'package:train_foodie_user/presentation/vendor_screen/venders_list/view/venderslist.dart';
 import 'package:train_foodie_user/presentation/vendor_screen/vendor_food_screen/view/vendor_food_screen.dart';
 
@@ -178,6 +182,23 @@ class _VendersTabState extends State<VendersTab> {
                                   });
                                   setState(() {});
                                   Navigator.pop(context);
+                                  foodBox.put(
+                                      'key ${generateRandomNumber()}',
+                                      FoodModel(
+                                        hotelname: _titleKey
+                                            .currentState!.value!
+                                            .trim(),
+                                        location: _locationKey
+                                            .currentState!.value!
+                                            .trim(),
+                                        des: _descriptionKey
+                                            .currentState!.value!
+                                            .trim(),
+                                        rating: _ratingKey.currentState!.value!
+                                            .trim(),
+                                        images: [],
+                                      ));
+                                  setState(() {});
                                 }
                               },
                               child: Text("Save data"),
@@ -221,5 +242,12 @@ class _VendersTabState extends State<VendersTab> {
         ),
       ),
     );
+  }
+
+  int generateRandomNumber() {
+    int min = 0;
+    int max = 100;
+    final Random random = Random();
+    return min + random.nextInt(max - min + 1);
   }
 }

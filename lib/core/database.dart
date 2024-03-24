@@ -74,16 +74,76 @@ class DatabaseData {
     'Uday Express'
   ];
   static List<String> stopNames = [
-    'Station 1',
-    'Station 2',
-    'Station 3',
-    'Station 4',
-    'Station 5',
-    'Station 6',
-    'Station 7',
-    'Station 8',
-    'Station 9',
-    'Station 10'
+    "Thiruvananthapuram Central",
+    "Kollam Junction",
+    "Kayamkulam Junction",
+    "Chengannur",
+    "Kottayam",
+    "Ernakulam Junction (South)",
+    "Thrissur",
+    "Aluva",
+    "Kozhikode (Calicut)",
+    "Kannur Junction",
+  ];
+  static List<String> tamilNaduStations = [
+    "Chennai Central",
+    "Chennai Egmore",
+    "Coimbatore Junction",
+    "Madurai Junction",
+    "Tiruchirappalli Junction",
+    "Salem Junction",
+    "Tirunelveli Junction",
+    "Vellore Cantonment",
+    "Tiruppur",
+    "Erode Junction",
+  ];
+  static List<String> goaStations = [
+    "Vasco da Gama Flutter",
+    "Madgaon Junction Flutter",
+    "Thivim Flutter",
+    "Karmali Flutter",
+    "Cansaulim Flutter",
+    "Sanvordem Curchorem Flutter",
+    "Pernem Flutter",
+    "Canacona Flutter",
+    "Dabolim Flutter",
+    "Colva Flutter",
+  ];
+  static List<String> delhiStations = [
+    "New Delhi",
+    "Old Delhi Junction",
+    "Hazrat Nizamuddin",
+    "Anand Vihar Terminal",
+    "Delhi Sarai Rohilla",
+    "Delhi Cantt",
+    "Shahdara Junction",
+    "Okhla",
+    "Ghaziabad Junction",
+    "Faridabad",
+  ];
+  static List<String> gujaratStations = [
+    "Ahmedabad Junction",
+    "Vadodara Junction",
+    "Surat",
+    "Rajkot Junction",
+    "Bhavnagar Terminus",
+    "Jamnagar",
+    "Junagadh Junction",
+    "Bhuj",
+    "Anand Junction",
+    "Vapi",
+  ];
+  static List<String> rajasthanStations = [
+    "Jaipur Junction",
+    "Jodhpur Junction",
+    "Ajmer Junction",
+    "Udaipur City",
+    "Bikaner Junction",
+    "Kota Junction",
+    "Alwar Junction",
+    "Sikar Junction",
+    "Bhilwara",
+    "Falna",
   ];
 
   static List<Map<String, dynamic>> usernames = [
@@ -198,61 +258,55 @@ class DatabaseData {
       'images': [
         {
           "pro_images":
-              "https://images.pexels.com/photos/2141993/pexels-photo-2141993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://www.foodandwine.com/thmb/nesQwmMJ6zA4Fb0TtAThMwdn56g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/steakhouse-style-rib-eyes-ft-recipe1118-235f4532bcf948efa82aab8065bb98d8.jpg",
           "product_name": "Gourmet Steak",
           "product_price": "149.99"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/2646019/pexels-photo-2646019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://www.modernhoney.com/wp-content/uploads/2024/01/Best-Chocolate-Cake-2-crop-scaled.jpg",
           "product_name": "Decadent Chocolate Cake",
           "product_price": "119.50"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/1633574/pexels-photo-1633574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://littleferrarokitchen.com/wp-content/uploads/2012/05/Julia-Childs-Lobster-Thermidor.jpg",
           "product_name": "Lobster Thermidor",
           "product_price": "179.75"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/2365598/pexels-photo-2365598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://www.lakeshorelady.com/wp-content/uploads/2021/02/mushroom-risotto-8.jpg",
           "product_name": "Truffle Risotto",
           "product_price": "130.99"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/1398836/pexels-photo-1398836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://www.simplyrecipes.com/thmb/ca3Pl7UTi6LWnfpsfrtXIupPerc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2014__12__prime-rib-horiz-a-1600-14ea76a0cde84a699d30ac611fe11b0c.jpg",
           "product_name": "Prime Rib",
           "product_price": "159.50"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/2098704/pexels-photo-2098704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://img.freepik.com/premium-photo/colorful-tropical-fruit-platter-with-slices-pineapple-watermelon-mango_925062-112.jpg",
           "product_name": "Exotic Fruit Platter",
           "product_price": "110.75"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/1559019/pexels-photo-1559019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://hips.hearstapps.com/hmg-prod/images/delish-filet-mignon-horizontal-1541189043.jpeg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*",
           "product_name": "Filet Mignon",
           "product_price": "145.99"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Caviar",
-          "product_price": "299.50"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
           "product_name": "Luxury Burger",
           "product_price": "129.99"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/1639790/pexels-photo-1639790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7.jpg",
           "product_name": "Molten Lava Cake",
           "product_price": "115.50"
         }
@@ -283,124 +337,45 @@ class DatabaseData {
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/3609730/pexels-photo-3609730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://handletheheat.com/wp-content/uploads/2023/12/easy-tiramisu-recipe.jpg",
           "product_name": "Tiramisu",
           "product_price": "110.75"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/373464/pexels-photo-373464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FEdit%2F2022-12-Lobster-Thermidor%2Flobster-thermidor-3",
           "product_name": "Lobster Thermidor",
           "product_price": "175.99"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/819360/pexels-photo-819360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              "https://thefoodieglobetrotter.com/wp-content/uploads/2020/05/Takeout-Kit-Italian-Mushroom-Truffle-Risotto-Meal-Kit.jpg",
           "product_name": "Truffle Risotto",
           "product_price": "130.50"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Prime Rib",
+              "https://img.onmanorama.com/content/dam/mm/en/lifestyle/health/images/2023/5/3/kuzhi-manthi.jpg",
+          "product_name": "Chicken Manthi",
           "product_price": "145.75"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/884612/pexels-photo-884612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Foie Gras",
+              "https://www.nestleprofessional.in/sites/default/files/2022-07/Fried-Rice.jpg",
+          "product_name": "Rice",
           "product_price": "180.99"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/3845415/pexels-photo-3845415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Filet Mignon",
+              "https://static01.nyt.com/images/2023/04/14/multimedia/14KOMOLAFE-rex1-chapa-mzjb-copy/14KOMOLAFE-rex1-chapa-mzjb-superJumbo.jpg",
+          "product_name": "Chappathi",
           "product_price": "190.50"
         },
         {
           "pro_images":
-              "https://images.pexels.com/photos/1244521/pexels-photo-1244521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Caviar",
+              "https://media-cdn.tripadvisor.com/media/photo-m/1280/17/67/6a/54/porotta-and-fish-curry.jpg",
+          "product_name": "Porotta meen curry",
           "product_price": "500.75"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/860733/pexels-photo-860733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Wagyu Beef",
-          "product_price": "350.99"
-        }
-      ]
-    },
-    {
-      'id': 3,
-      'name': 'Masala Dosa',
-      'hotelName': 'Seaside Haven Hotel',
-      'hotelDescription':
-          "Seaside Haven Hotel offers a picturesque getaway by the ocean, with breathtaking views and serene ambiance. Relax in our comfortable accommodations and savor fresh, coastal-inspired cuisine at our seaside restaurant. Whether it's a romantic escape or a family vacation, create cherished memories at Seaside Haven Hotel.",
-      'hotelImage':
-          'https://b.zmtcdn.com/data/pictures/0/19759030/8d4d8715b0605c2dd7b805bbfc28c002.jpg?fit=around|960:500&crop=960:500;*,*',
-      'location': 'Chennai',
-      'rating': 4.4,
-      'images': [
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Premium Steak",
-          "product_price": "159.99"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Lobster Thermidor",
-          "product_price": "179.50"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/2290072/pexels-photo-2290072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Truffle Risotto",
-          "product_price": "145.75"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/983373/pexels-photo-983373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Gourmet Seafood Platter",
-          "product_price": "199.99"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/1059946/pexels-photo-1059946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Caviar Dreams",
-          "product_price": "299.50"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Decadent Chocolate Cake",
-          "product_price": "129.99"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Filet Mignon",
-          "product_price": "189.50"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/2290072/pexels-photo-2290072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Luxurious Foie Gras",
-          "product_price": "175.75"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/983373/pexels-photo-983373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Exquisite Truffle Pasta",
-          "product_price": "159.99"
-        },
-        {
-          "pro_images":
-              "https://images.pexels.com/photos/1059946/pexels-photo-1059946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "product_name": "Deluxe Seafood Paella",
-          "product_price": "229.50"
         }
       ]
     },
