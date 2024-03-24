@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:train_foodie_user/core/alert_popup.dart';
 import 'package:train_foodie_user/presentation/get_started_screen/get_started_screen.dart';
 
@@ -26,13 +27,21 @@ class UserProfileScreen extends StatelessWidget {
                     context: context,
                     builder: (context) => CustomAlertPopup(
                         title: 'Do you want to LogOut?',
-                        onyesPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => GetStartedScreen(),
-                            ),
-                          );
+                        onyesPressed: () async {
+                          // Navigator.pushReplacement(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => GetStartedScreen(),
+                          //   ),
+                          // );
+                          final prefs = await SharedPreferences.getInstance();
+                          prefs.clear();
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => GetStartedScreen(),
+                              ),
+                              (route) => false);
                         }),
                   );
                 },

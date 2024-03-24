@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:train_foodie_user/presentation/user/bottom_nav_screen/view/bottom_nav_screeb.dart';
-import 'package:train_foodie_user/presentation/user/login_screen/view/login_screen.dart';
-import 'package:train_foodie_user/presentation/vendor_screen/admin_bottom_screen/view/vendor_Bottom_navscreen.dart';
+import 'package:train_foodie_user/presentation/user/user_login_screen/view/user_login_screen.dart';
+import 'package:train_foodie_user/presentation/vendor_screen/vendor_login_screen/view/vendor_login_screen.dart';
 
 class GetStartedScreen extends StatefulWidget {
   const GetStartedScreen({super.key});
@@ -28,7 +27,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AdminBottomNavScreen(),
+                    builder: (context) => VendorLoginScreen(),
                   ),
                 );
               },
@@ -51,7 +50,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => UserBottomNavScreen(),
+                    builder: (context) => UserLoginScreen(),
                   ),
                 );
               },
