@@ -199,7 +199,7 @@ class _ViewLocationScreenState extends State<ViewLocationScreen> {
                             ),
                           ),
                     SizedBox(height: 20.0),
-                    _pnrNumber == null || _pnrNumber!.isEmpty
+                    _pnrNumber == null
                         ? SizedBox()
                         : Container(
                             padding: EdgeInsets.symmetric(horizontal: 10),
@@ -219,7 +219,7 @@ class _ViewLocationScreenState extends State<ViewLocationScreen> {
                             ),
                           ),
                     SizedBox(height: 20.0),
-                    _phoneNumber == null || _phoneNumber!.isEmpty
+                    _phoneNumber == null
                         ? InkWell(
                             onTap: () {},
                             child: Container(

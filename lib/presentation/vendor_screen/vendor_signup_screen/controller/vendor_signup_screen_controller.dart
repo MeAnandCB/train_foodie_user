@@ -28,7 +28,7 @@ class VendorRegistrationScreenController with ChangeNotifier {
           await VendorRegistrationScreenService().onRegisteration(body: {
         "name": name,
         "phone": phone,
-        "address": "",
+        "address": "we",
         "email_address": emailAddress,
         "username": userName,
         "password": password,

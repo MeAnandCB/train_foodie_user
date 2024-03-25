@@ -27,7 +27,7 @@ class PassengerRegistrationScreenController with ChangeNotifier {
           await PassengerRegistrationScreenService().onRegisteration(body: {
         "name": name,
         "phone": phone,
-        "address": "",
+        "address": "qwert",
         "email_address": emailAddress,
         "username": userName,
         "password": password,

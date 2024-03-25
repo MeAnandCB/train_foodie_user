@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import 'package:train_foodie_user/presentation/user/payment_methode__screen/payment_method.dart';
@@ -42,7 +44,6 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
   @override
   Widget build(BuildContext context) {
     var value = double.parse(widget.amount);
-
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -119,7 +120,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
                               width: 15,
                             ),
                             Text(
-                              "${quantity * value}",
+                              "${(quantity * value).toStringAsFixed(2)}",
                               style: TextStyle(
                                   fontSize: 28, fontWeight: FontWeight.bold),
                             ),
