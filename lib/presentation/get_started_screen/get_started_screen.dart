@@ -24,7 +24,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => VendorLoginScreen(),
@@ -47,7 +47,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => UserLoginScreen(),
